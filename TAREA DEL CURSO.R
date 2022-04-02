@@ -9,12 +9,13 @@ rm(training)
 str(df_training)
 table(df_training$classe)
 
+#MODELO FINAL LUEGO DE SELECCION
 modelFit <- train(classe~raw_timestamp_part_1+raw_timestamp_part_2+roll_belt
                     ,data = df_training,method="rf")
 modelFit
 
 modelFit$finalModel
-############################
+############################ RESULTADOS
 predictions <- predict(modelFit,newdata=df_testing)
 predictions
 
