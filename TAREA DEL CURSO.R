@@ -18,4 +18,3 @@ modelFit$finalModel
 predictions <- predict(modelFit,newdata=df_testing)
 predictions
 
-confusionMatrix(predictions,df_testing$classe)
